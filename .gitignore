@@ -1,0 +1,7 @@
+# Archivo de variables de entorno (credenciales sensibles)
+.env
+
+# Directorio virtual de Python
+.venv/
+.venv314/
+venv/

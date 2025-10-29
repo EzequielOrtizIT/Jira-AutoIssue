@@ -1,0 +1,178 @@
+[
+  {
+    "summary": "Impresora de facturas sin papel en papelera auxiliar",
+    "description": "Usuario informa que la HP Color LaserJet MFP M477fdw no toma papel de la bandeja auxiliar. Error PCL 01 mostrado en pantalla.",
+    "priority": "2",
+    "labels": ["impresora", "hardware", "urgente"],
+    "components": ["Hardware Office"],
+    "duedate": "2025-07-30",
+    "environment": "Oficina Central",
+    "assignee": {"name": "soporte.ti"},
+    "fixVersions": ["Sprint 1"]
+  },
+  {
+    "summary": "Servidor SQL con CPU al 100% desde anoche",
+    "description": "El servidor `SQL-DB-01` presenta uso de CPU al 100% desde las 22:00 hs. Se generan timeouts en las consultas de inventario.",
+    "priority": "1",
+    "labels": ["servidor","SQL","producción"],
+    "components": ["Base de Datos","Infraestructura"],
+    "duedate": "2025-07-28",
+    "environment": "Producción",
+    "assignee": {"name": "dbadmin"},
+    "fixVersions": ["v2.3.4"]
+  },
+  {
+    "summary": "Usuarios bloqueados tras fallo en Active Directory",
+    "description": "Tras aplicar el parche de julio, varios usuarios no pueden iniciar sesión. Reciben el mensaje \"Your account has been disabled\".",
+    "priority": "1",
+    "labels": ["AD","login","seguridad"],
+    "components": ["Active Directory"],
+    "duedate": "2025-07-29",
+    "environment": "Dominio Corporativo",
+    "assignee": {"name": "ad.team"},
+    "fixVersions": ["Patch-July-2025"]
+  },
+  {
+    "summary": "Correo saliente retenido en cola de Exchange",
+    "description": "Todos los mensajes salientes quedan en cola VIEWP@EX01 con estado Retry due to DNS lookup failure.",
+    "priority": "3",
+    "labels": ["correo","Exchange","SMTP"],
+    "components": ["Exchange Server"],
+    "duedate": "2025-08-01",
+    "environment": "Servidores Email",
+    "assignee": {"name": "exchange.admin"},
+    "fixVersions": []
+  },
+  {
+    "summary": "Aplicación web arroja error 500 intermitente",
+    "description": "El portal de pedidos (`https://pedidos.miempresa.com`) devuelve 500 Internal Server Error en la página de checkout.\nLogs de `app-service` muestran NullPointerException.",
+    "priority": "2",
+    "labels": ["web","backend","error-500"],
+    "components": ["App Service","Frontend"],
+    "duedate": "2025-07-31",
+    "environment": "QA",
+    "assignee": {"name": "dev.team"},
+    "fixVersions": ["release-1.5"]
+  },
+  {
+    "summary": "Bluetooth del laptop HP EliteBook no empareja con headset",
+    "description": "El usuario 'mariana.rodriguez' no puede conectar sus audífonos BT modelo Jabra Evolve2 65 al HP EliteBook 840. Windows 11 build 22621.",
+    "priority": "4",
+    "labels": ["soporte-móvil","Bluetooth"],
+    "components": ["Helpdesk"],
+    "duedate": "2025-08-03",
+    "environment": "Windows 11",
+    "assignee": {"name": "soporte.movil"},
+    "fixVersions": []
+  },
+  {
+    "summary": "Workstation Dell sin señal de vídeo tras instalación de GPU",
+    "description": "Se ha instalado una NVIDIA RTX 3070 en la estación de diseño (`PC-DES-03`) pero no muestra señal de vídeo en ningún puerto (HDMI/DP).",
+    "priority": "2",
+    "labels": ["hardware","estación-diseño"],
+    "components": ["Workstations"],
+    "duedate": "2025-08-02",
+    "environment": "Taller Diseño",
+    "assignee": {"name": "soporte.hw"},
+    "fixVersions": []
+  },
+  {
+    "summary": "Backup de NAS falla por espacio insuficiente",
+    "description": "La tarea de respaldo a `NAS-Backup-02` reporta \"Disk Full\" al intentar copiar carpeta `/clientes`. Sólo quedan 5 GB libres.",
+    "priority": "5",
+    "labels": ["backup","NAS"],
+    "components": ["Almacenamiento"],
+    "duedate": "2025-07-29",
+    "environment": "Data Center",
+    "assignee": {"name": "backup.team"},
+    "fixVersions": []
+  },
+    {
+    "summary": "Impresora de almacén falla intermitentemente",
+    "description": "La impresora Zebra ZT230 del almacén imprime líneas distorsionadas cada 3 o 4 hojas. Ocurre desde el lunes.\nSe probó con diferentes cartuchos y sigue igual.",
+    "priority": "2",
+    "labels": ["impresora","almacén","hardware"],
+    "components": ["Infraestructura","Soporte HW"],
+    "environment": "Windows Server 2019, red interna segmento 192.168.10.0/24",
+    "duedate": "2025-07-30",
+    "fixVersions": ["v1.2.0"],
+    "assignee": { "accountId": "712020:91da5742-b4cf-4e5c-976c-11f2b84230e6" }
+  },
+  {
+    "summary": "VPN site-to-site caído entre Sucursal Sur y CPD",
+    "description": "Desde las 03:15 UTC la VPN IPsec ha perdido la conexión. El túnel está configurado con Azure VPN Gateway (PolicyBased).\nLogs muestran fase 1 OK, fase 2 timeout.",
+    "priority": "1",
+    "labels": ["vpn","network","azure"],
+    "components": ["Redes","Seguridad"],
+    "environment": "Azure Central US – VPN Gateway 'vgw-prod-01'",
+    "duedate": "2025-07-28",
+    "fixVersions": ["Infra-redes-2025.07"],
+    "assignee": { "accountId": "712020:91da5742-b4cf-4e5c-976c-11f2b84230e6" }
+  },
+  {
+    "summary": "Aplicación web devuelve 500 al crear usuario",
+    "description": "Al invocar POST /api/users con payload válido, se obtiene HTTP 500 y stacktrace:\n```\nNullReferenceException en UserService.cs:45\n```",
+    "priority": "3",
+    "labels": ["backend","api","bug"],
+    "components": ["API","Backend"],
+    "environment": "Docker container con .NET 6 en Kubernetes AKS",
+    "duedate": "2025-08-02",
+    "fixVersions": ["release-2025.08"],
+    "assignee": { "accountId": "******:******-****-****-******" }
+  },
+  {
+    "summary": "Stock de producto XYZ desincronizado entre ERP y e‑commerce",
+    "description": "Después de última migración, el módulo de inventario del ERP muestra 0 unidades, mientras que el e‑commerce continúa vendiendo.\nRequiere rollback parcial.",
+    "priority": "2",
+    "labels": ["erp","ecommerce","inventario"],
+    "components": ["Integraciones","Soporte SW"],
+    "environment": "SAP ECC 6.0 + Magento 2 (PHP 7.4)",
+    "duedate": "2025-07-29",
+    "fixVersions": ["hotfix-erp-sync-07"],
+    "assignee": { "accountId": "712020:91da5742-b4cf-4e5c-976c-11f2b84230e6" }
+  },
+  {
+    "summary": "Estación de trabajo se reinicia al abrir Excel",
+    "description": "Usuario reporta que al abrir cualquier archivo .xlsx, Windows 10 (1909) se reinicia sin pantalla azul.\nSe sospecha driver de GPU Intel obsoleto.",
+    "priority": "4",
+    "labels": ["windows","excel","driver"],
+    "components": ["Soporte HW","Soporte SW"],
+    "environment": "Windows 10 Pro v1909, Intel UHD Graphics 620",
+    "duedate": "2025-08-05",
+    "fixVersions": ["soporte-aug25"],
+    "assignee": {}
+  },
+  {
+    "summary": "Cableado de red suelto en rack CPD principal",
+    "description": "Se detectó que varios patch cords del rack 12 están flojos, provocando caída de intermitencia en VLAN 20.\nSe requiere revisión física y recableado.",
+    "priority": "3",
+    "labels": ["cableado","rack","cpd"],
+    "components": ["Redes","Infraestructura"],
+    "environment": "CPD Principal, Rack 12 Unidad 3–8",
+    "duedate": "2025-07-31",
+    "fixVersions": [],
+    "assignee": {}
+  },
+  {
+    "summary": "Lentitud al acceder a SharePoint Online",
+    "description": "Todas las páginas de intranet se cargan en >10s. Conectividad OK (ping < 20 ms), pero TTFB alto.\nPosible throttling o problema de CDN.",
+    "priority": "3",
+    "labels": ["sharepoint","office365","performance"],
+    "components": ["Cloud","Aplicaciones"],
+    "environment": "Office 365 – Tenant Contoso.onmicrosoft.com",
+    "duedate": "2025-08-10",
+    "fixVersions": ["2025-Q3"],
+    "assignee": { "accountId": "712020:91da5742-b4cf-4e5c-976c-11f2b84230e6" }
+  },
+  {
+    "summary": "Backup diario de base de datos no se completa",
+    "description": "El job de backup de SQL Server 2019 tarda >8 h y falla con error 823. Disco de destino en Blob Storage está near‑full.",
+    "priority": "2",
+    "labels": ["backup","sql","storage"],
+    "components": ["Bases de datos","Infraestructura"],
+    "environment": "VM SQL‑Prod01 en Azure, Disco P10 (128 GiB)",
+    "duedate": "2025-08-01",
+    "fixVersions": ["db-maintenance-2025.07"],
+    "assignee": {}
+  }
+]
