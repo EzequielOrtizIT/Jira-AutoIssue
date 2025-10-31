@@ -1,25 +1,23 @@
 [
   {
     "summary": "Impresora de facturas sin papel en papelera auxiliar",
-    "description": "Usuario informa que la HP Color LaserJet MFP M477fdw no toma papel de la bandeja auxiliar. Error PCL 01 mostrado en pantalla.",
+    "description": "Usuario informa que la HP Color LaserJet MFP M477fdw no toma papel de la bandeja auxiliar. Error PCL 01 mostrado en pantalla.",
     "priority": "2",
     "labels": ["impresora", "hardware", "urgente"],
     "components": ["Hardware Office"],
     "duedate": "2025-07-30",
     "environment": "Oficina Central",
     "assignee": {"name": "soporte.ti"},
-    "fixVersions": ["Sprint 1"]
+    "fixVersions": ["Sprint1"]
   },
   {
     "summary": "Servidor SQL con CPU al 100% desde anoche",
-    "description": "El servidor `SQL-DB-01` presenta uso de CPU al 100% desde las 22:00 hs. Se generan timeouts en las consultas de inventario.",
+    "description": "El servidor `SQL-DB-01` presenta uso de CPU al 100% desde las 22:00 hs. Se generan timeouts en las consultas de inventario.",
     "priority": "1",
     "labels": ["servidor","SQL","producción"],
     "components": ["Base de Datos","Infraestructura"],
     "duedate": "2025-07-28",
-    "environment": "Producción",
-    "assignee": {"name": "dbadmin"},
-    "fixVersions": ["v2.3.4"]
+    "assignee": {"name": "dbadmin"}
   },
   {
     "summary": "Usuarios bloqueados tras fallo en Active Directory",
@@ -56,18 +54,18 @@
   },
   {
     "summary": "Bluetooth del laptop HP EliteBook no empareja con headset",
-    "description": "El usuario 'mariana.rodriguez' no puede conectar sus audífonos BT modelo Jabra Evolve2 65 al HP EliteBook 840. Windows 11 build 22621.",
+    "description": "El usuario 'mariana.rodriguez' no puede conectar sus audífonos BT modelo Jabra Evolve2 65 al HP EliteBook 840. Windows 11 build 22621.",
     "priority": "4",
     "labels": ["soporte-móvil","Bluetooth"],
     "components": ["Helpdesk"],
     "duedate": "2025-08-03",
-    "environment": "Windows 11",
+    "environment": "Windows 11",
     "assignee": {"name": "soporte.movil"},
     "fixVersions": []
   },
   {
     "summary": "Workstation Dell sin señal de vídeo tras instalación de GPU",
-    "description": "Se ha instalado una NVIDIA RTX 3070 en la estación de diseño (`PC-DES-03`) pero no muestra señal de vídeo en ningún puerto (HDMI/DP).",
+    "description": "Se ha instalado una NVIDIA RTX 3070 en la estación de diseño (`PC-DES-03`) pero no muestra señal de vídeo en ningún puerto (HDMI/DP).",
     "priority": "2",
     "labels": ["hardware","estación-diseño"],
     "components": ["Workstations"],
@@ -78,7 +76,7 @@
   },
   {
     "summary": "Backup de NAS falla por espacio insuficiente",
-    "description": "La tarea de respaldo a `NAS-Backup-02` reporta \"Disk Full\" al intentar copiar carpeta `/clientes`. Sólo quedan 5 GB libres.",
+    "description": "La tarea de respaldo a `NAS-Backup-02` reporta \"Disk Full\" al intentar copiar carpeta `/clientes`. Sólo quedan 5 GB libres.",
     "priority": "5",
     "labels": ["backup","NAS"],
     "components": ["Almacenamiento"],
@@ -104,7 +102,7 @@
     "priority": "1",
     "labels": ["vpn","network","azure"],
     "components": ["Redes","Seguridad"],
-    "environment": "Azure Central US – VPN Gateway 'vgw-prod-01'",
+    "environment": "Azure Central US - VPN Gateway 'vgw-prod-01'",
     "duedate": "2025-07-28",
     "fixVersions": ["Infra-redes-2025.07"],
     "assignee": { "accountId": "712020:91da5742-b4cf-4e5c-976c-11f2b84230e6" }
@@ -118,11 +116,11 @@
     "environment": "Docker container con .NET 6 en Kubernetes AKS",
     "duedate": "2025-08-02",
     "fixVersions": ["release-2025.08"],
-    "assignee": { "accountId": "******:******-****-****-******" }
+    "assignee": { "accountId": "712020:91da5742-b4cf-4e5c-976c-11f2b84230e6" }
   },
   {
-    "summary": "Stock de producto XYZ desincronizado entre ERP y e‑commerce",
-    "description": "Después de última migración, el módulo de inventario del ERP muestra 0 unidades, mientras que el e‑commerce continúa vendiendo.\nRequiere rollback parcial.",
+    "summary": "Stock de producto XYZ desincronizado entre ERP y e-commerce",
+    "description": "Después de última migración, el módulo de inventario del ERP muestra 0 unidades, mientras que el e-commerce continúa vendiendo.\nRequiere rollback parcial.",
     "priority": "2",
     "labels": ["erp","ecommerce","inventario"],
     "components": ["Integraciones","Soporte SW"],
@@ -148,29 +146,29 @@
     "priority": "3",
     "labels": ["cableado","rack","cpd"],
     "components": ["Redes","Infraestructura"],
-    "environment": "CPD Principal, Rack 12 Unidad 3–8",
+    "environment": "CPD Principal, Rack 12 Unidad 3-8",
     "duedate": "2025-07-31",
     "fixVersions": [],
     "assignee": {}
   },
   {
     "summary": "Lentitud al acceder a SharePoint Online",
-    "description": "Todas las páginas de intranet se cargan en >10s. Conectividad OK (ping < 20 ms), pero TTFB alto.\nPosible throttling o problema de CDN.",
+    "description": "Todas las páginas de intranet se cargan en >10s. Conectividad OK (ping < 20 ms), pero TTFB alto.\nPosible throttling o problema de CDN.",
     "priority": "3",
     "labels": ["sharepoint","office365","performance"],
     "components": ["Cloud","Aplicaciones"],
-    "environment": "Office 365 – Tenant Contoso.onmicrosoft.com",
+    "environment": "Office 365 - Tenant Contoso.onmicrosoft.com",
     "duedate": "2025-08-10",
     "fixVersions": ["2025-Q3"],
     "assignee": { "accountId": "712020:91da5742-b4cf-4e5c-976c-11f2b84230e6" }
   },
   {
     "summary": "Backup diario de base de datos no se completa",
-    "description": "El job de backup de SQL Server 2019 tarda >8 h y falla con error 823. Disco de destino en Blob Storage está near‑full.",
+    "description": "El job de backup de SQL Server 2019 tarda >8 h y falla con error 823. Disco de destino en Blob Storage está near‑full.",
     "priority": "2",
     "labels": ["backup","sql","storage"],
     "components": ["Bases de datos","Infraestructura"],
-    "environment": "VM SQL‑Prod01 en Azure, Disco P10 (128 GiB)",
+    "environment": "VM SQL-Prod01 en Azure, Disco P10 (128 GiB)",
     "duedate": "2025-08-01",
     "fixVersions": ["db-maintenance-2025.07"],
     "assignee": {}
