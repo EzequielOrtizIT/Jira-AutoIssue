@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()  # lee .env en la carpeta del script
 
-JIRA_URL   = os.getenv("JIRA_URL")           # https://ezequielortiz-jira.atlassian.net
+JIRA_URL   = os.getenv("JIRA_URL")           # direccion del proyecto Jira
 JIRA_EMAIL = os.getenv("JIRA_EMAIL")         # tu correo Atlassian
 JIRA_TOKEN = os.getenv("JIRA_API_TOKEN")     # token nuevo
 
